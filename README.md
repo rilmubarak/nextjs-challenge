@@ -1,6 +1,11 @@
 # nextjs-challenge
 Learn Basic to Advanced with Next.Js
 
+* Technology includes: 
+    - React Js
+    - NextJs
+    - SASS
+
 how to use: 
 1. install the package 
 ```
