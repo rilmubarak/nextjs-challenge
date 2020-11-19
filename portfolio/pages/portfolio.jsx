@@ -1,8 +1,13 @@
 import Navbar from '../components/Navbar';
+import Head from 'next/head';
 
 export default () => {
     return (
         <>
+            <Head>
+                <title>Portfolio</title>
+            </Head>
+
             <Navbar />
 
             <section className="hero">
