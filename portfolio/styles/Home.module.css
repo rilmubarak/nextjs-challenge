@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 }
 
 .title a {
-  color: #195a5c;
+  color: #0d4a38;
   text-decoration: none;
 }
 
