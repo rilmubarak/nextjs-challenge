@@ -1,6 +1,15 @@
 import Link from 'next/link';
+import { withRouter } from 'next/router';
 
-export default () => {
+function Navbar({router}) {
+
+    const navs = [
+        { text: 'Home', href: '/'},
+        { text: 'About', href: '/about'},
+        { text: 'portfolio', href: '/portfolio'},
+        { text: 'contact', href: '/contact'}
+    ];
+
     return (
         <>
             <nav className="navbar">
@@ -8,14 +17,14 @@ export default () => {
                     <Link href="/"><a className="logo">Baril.</a></Link>
 
                     <ul className="nav-links">
-                        <li><Link href="/"><a className="nav-item 
-                        active">Home</a></Link></li>
-                        <li><Link href="/about"><a className="nav-item">About</a></Link></li>
-                        <li><Link href="/portfolio"><a className="nav-item">Portfolio</a></Link></li>
-                        <li><Link href="/contact"><a className="nav-item">Contact</a></Link></li>
+                        { navs.map(nav =>  (
+                            <li><Link href={nav.href}><a className={`nav-item ${ router.pathname === nav.href ? 'active' : ''}`}>{nav.text}</a></Link></li>
+                        ))}
                     </ul>
                 </div>
             </nav>
         </>
     )
 }
+
+export default withRouter(Navbar)
